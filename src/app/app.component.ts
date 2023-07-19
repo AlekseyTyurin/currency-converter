@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
+import { CurrencyApiService } from "./services/currency-api.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'untitled1';
+
 }

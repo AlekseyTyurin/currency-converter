@@ -1,0 +1,22 @@
+<div class="currency-exchange-block">
+  <h2>Currency Converter</h2>
+  <form [formGroup]="currencyConverterForm" (ngSubmit)="convertCurrency()">
+    <div class="form-group">
+      <label for="fromCurrency">From Currency:</label>
+      <input type="text" formControlName="amount" id="fromCurrency">
+      <select formControlName="selectedFromCurrency">
+        <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="toCurrency">To Currency:</label>
+      <input type="text" [value]="convertedAmount" id="toCurrency" disabled>
+      <select formControlName="selectedToCurrency">
+        <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+      </select>
+    </div>
+
+    <button type="submit">Convert</button>
+  </form>
+</div>
